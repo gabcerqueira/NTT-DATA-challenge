@@ -1,0 +1,32 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./backend/movies-backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+    restart: always
+    volumes:
+      - ./backend/movies-backend:/app
+      - /app/node_modules
+    networks:
+      - movies-network
+
+  frontend:
+    build:
+      context: ./frontend/movies-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/movies-frontend:/app
+      - /app/node_modules
+    networks:
+      - movies-network
+
+networks:
+  movies-network:
+    driver: bridge
