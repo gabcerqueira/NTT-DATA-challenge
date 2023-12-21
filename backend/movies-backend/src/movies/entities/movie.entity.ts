@@ -5,4 +5,6 @@ export class Movie {
   Type: string;
   Poster: string;
   imdbRating: string;
+  Plot: string;
+  Actors: string[];
 }

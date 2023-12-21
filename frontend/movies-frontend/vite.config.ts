@@ -14,5 +14,12 @@ export default defineConfig({
       port: 5173, // exposed docker image port
       clientPort: 5173, // mapped docker container port
     },
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
   },
 });

@@ -1,8 +1,6 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { useAppSelector } from "../../app/hooks";
 import WithSpinner from "../../components/withSpinner/WithSpinner";
 import Movies from "./Movies";
-import { RootState } from "../../app/store";
 import {
   selectLoadingMovies,
   selectMovie,
