@@ -41,5 +41,3 @@ yarn start:dev
 This will start the backend, and you can access it at [http://localhost:3000](http://localhost:3000).
 
 ---
-
-Feel free to replace "Movie Search App" with your actual app name and provide more specific details about the app's features or instructions as needed.
